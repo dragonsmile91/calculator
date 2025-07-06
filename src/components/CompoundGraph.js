@@ -111,11 +111,11 @@ function CompoundGraph({ yearlyData }) {
 
       <div className="graph-info">
         <div className="info-box">
-          <span className="info-label">최종 총액:</span>
+          <span className="info-label">총액:</span>
           <span className="info-value">{formatNumberInteger(finalTotal)}원</span>
         </div>
         <div className="info-box">
-          <span className="info-label">최종 수익률:</span>
+          <span className="info-label">수익률:</span>
           <span className="info-value">{formatPercentage(finalProfitRate)}</span>
         </div>
       </div>
