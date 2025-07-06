@@ -108,7 +108,6 @@ function CompoundGraph({ yearlyData }) {
   return (
     <div className="compound-graph">
 
-
       <div className="graph-info">
         <div className="info-box">
           <span className="info-label">총액:</span>
