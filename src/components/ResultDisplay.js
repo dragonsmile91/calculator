@@ -10,11 +10,7 @@ function ResultDisplay({ calculationData }) {
   if (!calculationData) return null;
 
   const { 
-    totalAmount, 
-    totalProfit, 
-    profitRate, 
-    yearlyData, 
-    growthStages 
+    yearlyData 
   } = calculationData;
 
   return (
