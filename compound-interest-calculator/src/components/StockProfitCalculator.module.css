@@ -1,0 +1,21 @@
+/**
+ * StockProfitCalculator.css - 주식 수익률 계산기 스타일
+ */
+
+.calculator {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.calculator-section {
+  margin-bottom: 2rem;
+}
+
+.results-container {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  margin-top: 2rem;
+} 

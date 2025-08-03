@@ -1,0 +1,580 @@
+/**
+ * LottoChecker.css - 로또 당첨번호 조회 스타일
+ */
+
+.lotto-checker {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.calculator-container {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+}
+
+/* 헤더 섹션 */
+.header-section {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #ecf0f1;
+}
+
+.header-section h2 {
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.header-section p {
+  color: #7f8c8d;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+/* 새로고침 버튼 */
+.refresh-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(102, 126, 234, 0.3);
+}
+
+.refresh-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(102, 126, 234, 0.4);
+}
+
+.refresh-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* 로딩 컨테이너 */
+.loading-container {
+  text-align: center;
+  padding: 3rem;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-container p {
+  color: #7f8c8d;
+  font-size: 1.1rem;
+}
+
+/* 에러 컨테이너 */
+.error-container {
+  text-align: center;
+  padding: 2rem;
+  background-color: #fdf2f2;
+  border-radius: 8px;
+  border: 1px solid #fecaca;
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.error-container button {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+/* 로또 회차 컨테이너 */
+.lotto-draws {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* 로또 회차 카드 */
+.lotto-draw {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border-left: 4px solid #3498db;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  width: 61.8%;
+  margin: 0 auto;
+}
+
+.lotto-draw:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* 회차 헤더 */
+.draw-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e1e8ed;
+}
+
+.draw-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.draw-number {
+  font-size: 1.2rem;
+  color: #3498db;
+}
+
+.draw-date {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+}
+
+/* 번호 컨테이너 */
+.numbers-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.main-numbers {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+/* 보너스 섹션 */
+.bonus-section {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+/* 보너스 번호 */
+.bonus-number {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.bonus-label {
+  font-size: 0.8rem;
+  color: #ff6b35;
+  font-weight: 600;
+}
+
+/* 당첨금액 정보 */
+.prize-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-end;
+}
+
+.prize-top {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.prize-bottom {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: flex-start;
+}
+
+/* 당첨금액 레이아웃 */
+.prize-labels {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-end;
+}
+
+.prize-amounts {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-end;
+}
+
+/* 당첨금액 요소별 스타일 */
+.total-label {
+  color: #7f8c8d;
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+.total-amount {
+  color: #e74c3c;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.prize-label {
+  color: #7f8c8d;
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+.prize-detail {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.winner-count {
+  color: #3498db;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.each-label {
+  color: #7f8c8d;
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+.prize-amount {
+  color: #27ae60;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+/* 로또 번호 */
+.lotto-number {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease;
+}
+
+.lotto-number:hover {
+  transform: scale(1.1);
+}
+
+.lotto-number.bonus {
+  border: 3px solid #ff6b35;
+  box-shadow: 0 2px 4px rgba(255, 107, 53, 0.3);
+}
+
+/* 정보 섹션 */
+.info-section {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e1e8ed;
+}
+
+.info-section h4 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* 색상 범례 */
+.color-legend {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #2c3e50;
+}
+
+.legend-color {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+/* 페이지네이션 */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.pagination-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+  padding: 0.5rem;
+  border: 1px solid #e1e8ed;
+  background: white;
+  color: #2c3e50;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.pagination-button:hover:not(:disabled) {
+  background: #f8f9fa;
+  border-color: #3498db;
+  color: #3498db;
+  transform: translateY(-1px);
+}
+
+.pagination-button.active {
+  background: #3498db;
+  color: white;
+  border-color: #3498db;
+}
+
+.pagination-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.pagination-ellipsis {
+  color: #7f8c8d;
+  font-weight: 500;
+  padding: 0 0.5rem;
+}
+
+/* 다크 모드 페이지네이션 */
+@media (prefers-color-scheme: dark) {
+  .pagination-button {
+    background: #2c3e50;
+    border-color: #34495e;
+    color: #ecf0f1;
+  }
+  
+  .pagination-button:hover:not(:disabled) {
+    background: #34495e;
+    border-color: #3498db;
+    color: #3498db;
+  }
+  
+  .pagination-button.active {
+    background: #3498db;
+    color: white;
+  }
+  
+  .pagination-ellipsis {
+    color: #bdc3c7;
+  }
+}
+
+/* 반응형 페이지네이션 */
+@media (max-width: 768px) {
+  .pagination {
+    gap: 0.25rem;
+  }
+  
+  .pagination-button {
+    min-width: 35px;
+    height: 35px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pagination {
+    gap: 0.2rem;
+  }
+  
+  .pagination-button {
+    min-width: 30px;
+    height: 30px;
+    font-size: 0.75rem;
+  }
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .lotto-checker {
+    padding: 0.5rem;
+  }
+  
+  .calculator-container {
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .header-section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .draw-header {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+  
+  .numbers-container {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .bonus-section {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .prize-info {
+    align-items: center;
+  }
+  
+  .prize-top {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .prize-labels {
+    align-items: center;
+  }
+  
+  .prize-amounts {
+    align-items: center;
+  }
+  
+  .prize-bottom {
+    justify-content: center;
+  }
+  
+  .main-numbers {
+    justify-content: center;
+  }
+  
+  .color-legend {
+    gap: 1rem;
+  }
+  
+  .legend-item {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .calculator-container {
+    padding: 1rem;
+  }
+  
+  .header-section h2 {
+    font-size: 1.3rem;
+  }
+  
+  .lotto-number {
+    width: 35px;
+    height: 35px;
+    font-size: 0.9rem;
+  }
+  
+  .draw-header {
+    font-size: 0.9rem;
+  }
+  
+  .total-amount,
+  .prize-amount {
+    font-size: 0.9rem;
+  }
+  
+  .color-legend {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+
+/* 다크 모드 지원 */
+@media (prefers-color-scheme: dark) {
+  .calculator-container {
+    background: #2c3e50;
+    color: #ecf0f1;
+  }
+  
+  .lotto-draw {
+    background: #34495e;
+    border-left-color: #3498db;
+  }
+  
+  .info-section {
+    background: #34495e;
+    border-color: #4a5568;
+  }
+  
+  .draw-header {
+    border-bottom-color: #4a5568;
+  }
+  
+  .total-label,
+  .prize-label,
+  .each-label {
+    color: #bdc3c7;
+  }
+  
+  .loading-container p {
+    color: #bdc3c7;
+  }
+} 

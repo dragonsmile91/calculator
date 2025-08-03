@@ -1,0 +1,320 @@
+/**
+ * DDayCalculator.css - D-Day 계산기 스타일
+ */
+
+.dday-calculator {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.calculator-container {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+}
+
+.calculator-container h2 {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+}
+
+.calculator-container p {
+  color: #7f8c8d;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+/* 현재 시간 표시 */
+.current-time {
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  border: 1px solid #e0e0e0;
+  text-align: center;
+}
+
+.current-time span {
+  color: #2c3e50;
+  font-weight: 600;
+  font-size: 1.1rem;
+  font-family: 'Courier New', monospace;
+}
+
+/* 오늘 날짜 정보 */
+.today-info {
+  background-color: #e8f4fd;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 2rem;
+  border-left: 4px solid #3498db;
+}
+
+.today-info span {
+  color: #2c3e50;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+/* 입력 폼 스타일 */
+.input-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.input-group input {
+  padding: 0.75rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  background-color: #fafafa;
+  text-align: center;
+  font-weight: 500;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #3498db;
+  background-color: white;
+}
+
+/* 결과 컨테이너 */
+.results-container {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.results-container h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.result-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.target-date {
+  color: #2c3e50;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* D-Day 결과 스타일 */
+.dday-result {
+  text-align: center;
+  border-radius: 8px;
+  margin: 0 0;
+}
+
+.past-date {
+  background-color: #fff3cd;
+  border: 2px solid #ffeaa7;
+}
+
+.future-date {
+  background-color: #d1ecf1;
+  border: 2px solid #bee5eb;
+}
+
+.dday-number {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.dday-text {
+  display: block;
+  font-size: 1.1rem;
+  color: #7f8c8d;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+/* 시간 차이 표시 */
+.time-difference {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.time-label {
+  display: block;
+  font-size: 0.9rem;
+  color: #6c757d;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.time-value {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #2c3e50;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 0.5px;
+}
+
+/* 추가 정보 */
+.additional-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background-color: white;
+  border-radius: 4px;
+  border: 1px solid #e0e0e0;
+}
+
+.info-item .label {
+  color: #7f8c8d;
+  font-weight: 500;
+}
+
+.info-item .value {
+  color: #2c3e50;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* 사용법 안내 */
+.usage-guide {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+}
+
+.usage-guide h4 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.usage-guide ul {
+  color: #7f8c8d;
+  line-height: 1.6;
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.usage-guide li {
+  margin-bottom: 0.5rem;
+}
+
+/* 실시간 업데이트 애니메이션 */
+.time-value {
+  animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .dday-calculator {
+    padding: 0.5rem;
+  }
+  
+  .calculator-container {
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .calculator-container h2 {
+    font-size: 1.5rem;
+  }
+  
+  .input-form {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .dday-number {
+    font-size: 2rem;
+  }
+  
+  .additional-info {
+    grid-template-columns: 1fr;
+  }
+  
+  .current-time span {
+    font-size: 1rem;
+  }
+  
+  .time-value {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .calculator-container {
+    padding: 1rem;
+  }
+  
+  .calculator-container h2 {
+    font-size: 1.3rem;
+  }
+  
+  .input-group input {
+    padding: 0.625rem;
+    font-size: 0.9rem;
+  }
+  
+  .dday-number {
+    font-size: 1.8rem;
+  }
+  
+  .dday-text {
+    font-size: 1rem;
+  }
+  
+  .time-value {
+    font-size: 0.9rem;
+  }
+} 

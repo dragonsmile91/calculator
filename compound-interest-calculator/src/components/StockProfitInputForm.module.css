@@ -1,0 +1,210 @@
+/**
+ * StockProfitInputForm.css - 주식 수익률 계산기 입력 폼 스타일
+ */
+
+.input-form-container {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.form-header h2 {
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.form-header p {
+  color: #7f8c8d;
+  font-size: 1rem;
+}
+
+.input-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form-section {
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+}
+
+.form-section h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* 수수료 및 세금 섹션을 위한 특별 스타일 */
+.form-section:has(.input-group:has(input[name="commission"])) {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-section:has(.input-group:has(input[name="commission"])) .input-group {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.form-section:has(.input-group:has(input[name="commission"])) .input-group:first-child {
+  margin-right: 1rem;
+}
+
+/* 수수료 및 세금 입력 그룹들을 감싸는 컨테이너 */
+.commission-tax-container {
+  display: flex;
+  gap: 1rem;
+}
+
+/* 매매 정보 입력 그룹들을 감싸는 컨테이너 */
+.trading-info-container {
+  display: flex;
+  gap: 1rem;
+}
+
+/* 매매수수료 세금 너비 조절 */
+.commission-tax-container .input-group:first-child {
+    flex: 0.317;
+  }
+.commission-tax-container .input-group:last-child {
+  flex: 0.317;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.input-group:last-child {
+  margin-bottom: 0;
+}
+
+.input-group label {
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.input-group input {
+  padding: 0.75rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  background-color: white;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.input-group small {
+  color: #7f8c8d;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.error {
+  color: #e74c3c;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.calculate-button {
+  padding: 0.75rem 2rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.calculate-button:hover {
+  background-color: #2980b9;
+}
+
+.reset-button {
+  padding: 0.75rem 2rem;
+  background-color: #95a5a6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.reset-button:hover {
+  background-color: #7f8c8d;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .input-form-container {
+    padding: 1rem;
+  }
+  
+  .form-section {
+    padding: 1rem;
+  }
+  
+  .trading-info-container {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .trading-info-container .input-group {
+    margin-bottom: 1rem;
+  }
+  
+  .trading-info-container .input-group:last-child {
+    margin-bottom: 0;
+  }
+  
+  .commission-tax-container {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .commission-tax-container .input-group {
+    margin-bottom: 1rem;
+  }
+  
+  .commission-tax-container .input-group:last-child {
+    margin-bottom: 0;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+  }
+  
+  .calculate-button,
+  .reset-button {
+    width: 100%;
+  }
+} 

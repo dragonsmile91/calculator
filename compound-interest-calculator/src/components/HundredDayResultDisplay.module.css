@@ -1,0 +1,231 @@
+/**
+ * HundredDayResultDisplay.css - 100일 계산기 결과 표시 스타일
+ */
+
+.result-display {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.result-header {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.result-header h2 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.date-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background-color: #e8f4fd;
+  border-radius: 8px;
+  color: #3498db;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.days-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.result-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.result-section {
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+}
+
+.result-section h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.date-flow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.date-card {
+  flex: 1;
+  min-width: 200px;
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.date-card:hover {
+  border-color: #3498db;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.date-card.result-date {
+  border-color: #3498db;
+  background-color: #e8f4fd;
+}
+
+.date-label {
+  color: #7f8c8d;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.date-value {
+  color: #2c3e50;
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.weekday {
+  color: #3498db;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.arrow-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: #7f8c8d;
+  padding: 1rem;
+}
+
+.arrow-text {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #3498db;
+}
+
+.result-summary {
+  margin-top: 1rem;
+}
+
+.summary-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background-color: #e8f4fd;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.summary-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3498db;
+}
+
+.summary-content h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.summary-date {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: #7f8c8d;
+}
+
+.summary-arrow {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: #3498db;
+}
+
+.summary-result {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.result-note {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  border-left: 4px solid #3498db;
+}
+
+.result-note h4 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.result-note ul {
+  color: #7f8c8d;
+  line-height: 1.6;
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.result-note li {
+  margin-bottom: 0.5rem;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .result-display {
+    padding: 1rem;
+  }
+  
+  .result-section {
+    padding: 1rem;
+  }
+  
+  .date-flow {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .date-card {
+    min-width: auto;
+    width: 100%;
+  }
+  
+  .arrow-container {
+    transform: rotate(90deg);
+  }
+  
+  .summary-card {
+    flex-direction: column;
+    text-align: center;
+  }
+} 

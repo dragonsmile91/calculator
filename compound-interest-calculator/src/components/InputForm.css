@@ -1,0 +1,240 @@
+/**
+ * InputForm.css - 입력 폼 컴포넌트 스타일
+ */
+
+.input-form {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 0;
+}
+
+.input-form h2 {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+  padding-bottom: 0.5rem;
+}
+
+/* 폼 그룹 스타일 */
+.form-group {
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.form-group label {
+  min-width: 120px;
+  color: #34495e;
+  font-weight: 500;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.form-group input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 2px solid #e1e8ed;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: #f8f9fa;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #3498db;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.form-group input.error {
+  border-color: #e74c3c;
+  background: #fdf2f2;
+}
+
+.form-group input.error:focus {
+  border-color: #e74c3c;
+  box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+  display: block;
+  margin-left: 120px;
+}
+
+/* 입력 필드 단위 표시 스타일 */
+.input-with-unit {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.input-with-unit input {
+  padding-right: 6rem !important;
+}
+
+.unit-text {
+  position: absolute;
+  right: 0.75rem;
+  color: #6c757d;
+  font-size: 0.85rem;
+  font-style: italic;
+  pointer-events: none;
+  z-index: 1;
+  white-space: nowrap;
+}
+
+/* 버튼 스타일 */
+.form-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.btn-calculate,
+.btn-reset {
+  flex: 1;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  height: 50px;
+}
+
+.btn-calculate {
+  background: #3498db;
+  color: white;
+}
+
+.btn-calculate:hover {
+  background: #2980b9;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
+}
+
+.btn-calculate:active {
+  transform: translateY(0);
+}
+
+.btn-reset {
+  background: #95a5a6;
+  color: white;
+}
+
+.btn-reset:hover {
+  background: #7f8c8d;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(149, 165, 166, 0.3);
+}
+
+.btn-reset:active {
+  transform: translateY(0);
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .input-form {
+    padding: 1.5rem;
+    margin: 0 1rem;
+  }
+
+  .input-form h2 {
+    font-size: 1.25rem;
+  }
+
+  .form-group {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+
+  .form-group label {
+    min-width: auto;
+    margin-bottom: 0.25rem;
+  }
+
+  .error-message {
+    margin-left: 0;
+  }
+
+  .form-buttons {
+    flex-direction: column;
+  }
+
+  .btn-calculate,
+  .btn-reset {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .input-form {
+    padding: 1rem;
+    margin: 0 0.5rem;
+  }
+
+  .input-form h2 {
+    font-size: 1.1rem;
+  }
+
+  .form-group input {
+    padding: 0.625rem;
+    font-size: 0.9rem;
+  }
+
+  .btn-calculate,
+  .btn-reset {
+    padding: 0.625rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* 접근성 개선 */
+.form-group input:focus-visible {
+  outline: 2px solid #3498db;
+  outline-offset: 2px;
+}
+
+/* 다크 모드 지원 */
+@media (prefers-color-scheme: dark) {
+  .input-form {
+    background: #2c3e50;
+    color: #ecf0f1;
+  }
+
+  .input-form h2 {
+    color: #ecf0f1;
+  }
+
+  .form-group label {
+    color: #bdc3c7;
+  }
+
+  .form-group input {
+    background: #34495e;
+    border-color: #4a5568;
+    color: #ecf0f1;
+  }
+
+  .form-group input:focus {
+    background: #2c3e50;
+    border-color: #3498db;
+  }
+
+  .form-group input.error {
+    background: #4a2c2c;
+    border-color: #e74c3c;
+  }
+} 

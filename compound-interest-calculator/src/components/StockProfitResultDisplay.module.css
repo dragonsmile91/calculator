@@ -1,0 +1,225 @@
+/**
+ * StockProfitResultDisplay.css - 주식 수익률 계산기 결과 표시 스타일
+ */
+
+.result-display {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.result-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #ecf0f1;
+}
+
+.result-header h2 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.profit-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.profit-indicator.profit {
+  background-color: #d5f4e6;
+  color: #27ae60;
+}
+
+.profit-indicator.loss {
+  background-color: #fadbd8;
+  color: #e74c3c;
+}
+
+.profit-indicator.neutral {
+  background-color: #f8f9fa;
+  color: #7f8c8d;
+}
+
+.profit-amount {
+  font-size: 2.3cap;
+  font-weight: 800;
+  margin-right: 0.5rem;
+}
+
+.profit-rate {
+  font-size: 2.3cap;
+  font-weight: 800;
+  margin-right: 0.5rem;
+}
+
+/* .profit-rate {
+  font-size: 2rem;
+  font-weight: 800;
+} */
+
+.result-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.result-section {
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+}
+
+.result-section h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.result-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.result-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background-color: white;
+  border-radius: 4px;
+  border: 1px solid #e0e0e0;
+}
+
+.result-item.highlight {
+  background-color: #ecf0f1;
+  border-color: #bdc3c7;
+  font-weight: 600;
+}
+
+.result-item label {
+  color: #7f8c8d;
+  font-weight: 500;
+}
+
+.result-item .value {
+  color: #2c3e50;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.result-item .value.profit {
+  color: #27ae60;
+}
+
+.result-item .value.loss {
+  color: #e74c3c;
+}
+
+.result-summary {
+  margin-top: 1rem;
+}
+
+.summary-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.summary-card.profit {
+  background-color: #d5f4e6;
+  border: 2px solid #27ae60;
+}
+
+.summary-card.loss {
+  background-color: #fadbd8;
+  border: 2px solid #e74c3c;
+}
+
+.summary-card.neutral {
+  background-color: #f8f9fa;
+  border: 2px solid #bdc3c7;
+}
+
+.summary-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.summary-content h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.summary-amount {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.summary-rate {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.result-note {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  border-left: 4px solid #3498db;
+}
+
+.result-note h4 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.result-note ul {
+  color: #7f8c8d;
+  line-height: 1.6;
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.result-note li {
+  margin-bottom: 0.5rem;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .result-display {
+    padding: 1rem;
+  }
+  
+  .result-section {
+    padding: 1rem;
+  }
+  
+  .result-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .summary-card {
+    flex-direction: column;
+    text-align: center;
+  }
+} 
